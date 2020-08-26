@@ -1,0 +1,11 @@
+{
+    id: com.tuubcast.YouTubePlaylists.${CHANNEL_ID},
+    language: ko,
+    version: 1.0,
+    title: "${APP_TITLE};",
+    description: "${APP_DESCRIPTION}",
+    channel: {
+        id: com.tuubcast.kr.YouTubePlaylists, 
+        title: "유튜브 플레이리스트 채널"
+    }
+}
