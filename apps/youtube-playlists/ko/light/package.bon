@@ -2,7 +2,7 @@
     id: com.tuubcast.YouTubePlaylists.${CHANNEL_ID},
     language: ko,
     version: 1.0,
-    title: "${APP_TITLE};",
+    title: "${APP_TITLE}",
     description: "${APP_DESCRIPTION}",
     channel: {
         id: com.tuubcast.kr.YouTubePlaylists, 
