@@ -1,5 +1,5 @@
 {
-    id: com.tuubcast.YouTubePlaylists.${CHANNEL_ID},
+    id: "com.tuubcast.YouTubePlaylists.${CHANNEL_ID}",
     language: ko,
     version: 1.0,
     title: "${APP_TITLE}",
