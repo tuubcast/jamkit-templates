@@ -29,7 +29,7 @@ function feed_musics(keyword, location, length, sortkey, sortorder, handler) {
             webjs.call("getChapters").then(function(result) {
                 var duration = owner.view("owner").object("youtube.player").value("duration")
                 var chapters = result["chapters"]
-                var ignorePattern = /(광고.*제거|플레이 *리스트|PLAY *LIST|TIME *LINE|재생 *시간)/
+                var ignorePattern = /(광고.*제거|플레이 *리스트|PLAY *LIST|𝐏𝐋𝐀𝐘 *𝐋𝐈𝐒𝐓|TIME *LINE)/
                 var musics = []
 
                 if (chapters.length > 0 && chapters[chapters.length - 1]["title"].match(ignorePattern)) {
