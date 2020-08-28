@@ -50,6 +50,7 @@ function __getChapters(onResult, onError) {
             }, 200);
         }
     } catch(e) {
+        console.log(e)
         setTimeout(function() {
             __getChapters(onResult, onError);
         }, 200);
@@ -60,31 +61,34 @@ function __getChaptersWithComments(comments) {
     for (var i = 0; i < comments.length; ++i) {
         var commentText = comments[i].getElementsByClassName('comment-text')[0].textContent;
         var timestampLines = __getTimestampLines(commentText);
+        var chapters = [], lastTime;
 
-        if (timestampLines.length > 3) {
-            var chapters = [];
+        timestampLines.forEach(function(line) {
+            var [ time, title ] = __parseTimestampLine(line);
 
-            timestampLines.forEach(function(line) {
-                var [ time, title ] = __parseTimestampLine(line);
-
+            if (time === lastTime) {
+                if (title.length > chapters[chapters.length - 1]["title"].length) {
+                    chapters[chapters.length - 1]["title"] = title;
+                }
+            } else {
                 chapters.push({ "time":time, "title":title });
-            });
+            }
 
+            lastTime = time;
+        });
+
+        if (chapters.length > 3) {
             return chapters;
         }
     }
 }
 
 function __getTimestampLines(text) {
-    var lines = [], lastTimestamp;
+    var lines = [];
 
     text.split('\n').forEach(function(line) {
-        var match = line.match(/[0-9]+(\:[0-9]{2}){1,2}/);
-
-        if (match && match[0] !== lastTimestamp) {
+        if (line.match(/[0-9]+(\:[0-9]{2}){1,2}/)) {
             lines.push(line.replace('\r', ''));
-
-            lastTimestamp = match[0];
         }
     })
 
@@ -104,7 +108,7 @@ function __parseTimestampLine(line) {
         var match = line.match(patterns[i]);
 
         if (match) {
-            return [ match[1], line.replace(match[0], "").trim() ]
+            return [ match[1].trim(), line.replace(match[0], "").replace(/[0-9]+(\:[0-9]{2}){1,2}/g, "").trim() ]
         }
     }
 
