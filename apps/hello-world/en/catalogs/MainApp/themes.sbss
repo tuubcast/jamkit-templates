@@ -28,6 +28,13 @@ $SERIF_BOLDITALIC = NotoSerif-BoldItalic
 $SERIF_BLACK = NotoSerif-Black
 $SERIF_BLACKITALIC = NotoSerif-BlackItalic
 
+-- fonts for Korean --
+$SANS_KR_BOLD = NotoSansKR-Bold
+$SANS_KR_MEDIUM = NotoSansKR-Medium
+$SANS_KR_REGULAR = NotoSansKR-Regular
+$SANS_KR_LIGHT = NotoSansKR-Light
+$SANS_KR_THIN = NotoSansKR-Thin
+
 -- global colors --
 $COLOR_BLACK = #000000
 $COLOR_BLACK_DIM = #00000080
