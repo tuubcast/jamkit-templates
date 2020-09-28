@@ -1,0 +1,12 @@
+=begin empty
+
+=begin content
+=begin message: style=default.message
+@{Preparing a list of contents.}
+=end message
+=begin message: style=search.message
+@{There is no search result.}
+=end message
+=end content
+
+=end empty

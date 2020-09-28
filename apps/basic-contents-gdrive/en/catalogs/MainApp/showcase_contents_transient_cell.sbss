@@ -1,0 +1,3 @@
+import themes.sbss
+
+#blank_cover: color=$COLOR_DARK_WHITE, width=1pw, height=1pw*9/16

@@ -1,0 +1,11 @@
+=begin cell
+
+=object image: style=img_cover
+
+=begin info
+=begin title
+${title}
+=end title
+=end info
+
+=end cell

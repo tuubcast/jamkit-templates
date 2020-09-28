@@ -1,0 +1,10 @@
+import themes.sbss
+
+#img_cover: width=(1ph-10dp)*16/9, height=1ph-10dp, position=abs, gravity=left-top, scale-mode=fill
+#blank_line: color=$THEME_COLOR_LIGHT_TEXT, width=1pw, height=1dp, position=abs, gravity=bottom
+
+#btn_favorite: width=44dp, height=44dp, position=abs, gravity=right-bottom, y=-5dp
+
+/cell/info: margin="2dp 10dp 0 (1ph-10dp)*16/9+10dp"
+/cell/info/title: font-family=@{$SANS_MEDIUM}, font-size=1.1, \
+            text-color=$THEME_COLOR_TEXT, text-align=left, line-spacing=-2dp, line-break-mode=word-wrap

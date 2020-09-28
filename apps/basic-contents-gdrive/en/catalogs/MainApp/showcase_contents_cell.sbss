@@ -1,0 +1,7 @@
+import themes.sbss
+
+#img_cover: width=1pw, height=1pw*9/16, scale-mode=fill, default-color=$COLOR_DARK_WHITE
+
+/cell/info: margin="5dp 0 0 0"
+/cell/info/title: font-family=@{$SANS_MEDIUM}, font-size=1.1, \
+        text-color=$THEME_COLOR_TEXT, text-align=left, line-spacing=-2dp, line-break-mode=word-wrap

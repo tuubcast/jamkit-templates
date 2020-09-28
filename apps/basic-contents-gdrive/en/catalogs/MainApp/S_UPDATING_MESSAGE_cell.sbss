@@ -1,0 +1,5 @@
+import themes.sbss
+
+#label_message: width=0.8pw, height=1ph, position=abs, gravity=center, \
+            font-family=@{$SANS_REGULAR}, font-size=0.95, text-align=center, text-color=$THEME_COLOR_MESSAGE_TEXT, \
+            content-border-radius=1ph/2, content-background-color=$THEME_COLOR_MESSAGE_BACKGROUND

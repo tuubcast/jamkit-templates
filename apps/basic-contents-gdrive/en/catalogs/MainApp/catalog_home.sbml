@@ -1,0 +1,12 @@
+=begin catalog: script-when-back=on_back
+
+=object showcase: id=showcase.home, name=home, row-count=1, page-enabled=yes, \
+            style=showcase_home
+
+=object cell: id=cell.favorites, display-unit=S_FAVORITES, hidden=yes, \
+            style=cell_favorites
+
+=object cell: id=cell.updating.message, display-unit=S_UPDATING_MESSAGE, hidden=yes, \
+            style=cell_updating.message
+
+=end catalog

@@ -1,0 +1,11 @@
+import themes.sbss
+
+/empty/content: display=block, position=abs, gravity=center, y=-20dp
+/empty/content/message: font-family=@{$SANS_REGULAR}, font-size=1.2, \
+            text-align=center, text-color=$THEME_COLOR_TEXT
+
+if $SEARCH_MODE == "yes"
+    #default.message: display=none
+else
+    #search.message: display=none
+end

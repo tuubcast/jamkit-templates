@@ -1,0 +1,31 @@
+import themes.sbss
+
+#section_navibar: width=1pw, height=60dp, margin-top=1sbh, content-background-color=$THEME_COLOR_LIGHT_BACKGROUND
+#btn_navibar.right: width=44dp, height=44dp, position=abs, gravity=right, x=-5dp
+#btn_navibar.right.second: style=btn_navibar.right, x=-(44dp+5dp)
+#btn_back: width=44dp, height=44dp, vertical-align=middle
+
+#section_searchbar: width=1pw, height=1ph, position=abs, gravity=center, \
+        content-background-color=$THEME_COLOR_LIGHT_BACKGROUND
+#blank_keyword: width=1pw-(10dp+44dp+5dp), height=40dp, position=abs, gravity=left, x=10dp, \
+        content-border-width=1dp, content-border-color=$COLOR_LIGHT_GRAY
+#textfield_keyword: width=1pw-(20dp+44dp+44dp+5dp), height=30dp, position=abs, gravity=left, x=20dp, \
+        font-family=@{$SANS_KR_BOLD}, font-size=1.2, text-color=$THEME_COLOR_TEXT, placeholder-color=$COLOR_GRAY
+#btn_clear: width=44dp, height=44dp, position=abs, gravity=right, x=-(44dp+5dp)
+
+#showcase_contents: width=1pw, height=100%, \
+        keeps-offscreen-cells=yes, content-background-color=$THEME_COLOR_DARK_BACKGROUND
+
+/cell: page-background-color=$THEME_COLOR_LIGHT_BACKGROUND
+/cell/navibar: display=none
+/cell/navibar/title: display=block, margin="0 10dp", position=abs, gravity=center, \
+        font-family=@{$SANS_MEDIUM}, font-size=1.6, text-color=$COLOR_BLACK, text-align=left
+/cell/navibar/searchbar: display=none
+
+if $SCREEN_WIDTH > 5
+    #showcase_contents: column-count=2, cell-size="(1pw-10dp*3)/2, (1pw-10dp*3)/2*9/16+54dp", \
+            cell-spacing=10dp, content-margin=10dp, preload-count=10
+else
+    #showcase_contents: column-count=1, cell-size="1pw-10dp*2, (1pw-10dp*2)*9/16+54dp", \
+            cell-spacing=10dp, content-margin=10dp, preload-count=5
+end

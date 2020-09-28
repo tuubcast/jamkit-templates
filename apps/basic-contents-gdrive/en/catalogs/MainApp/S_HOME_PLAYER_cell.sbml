@@ -1,0 +1,4 @@
+=begin cell: script-when-loaded=on_loaded, \
+            data-binding="favorite-${content-id}", script-when-data-changed=on_data_changed
+
+=end cell

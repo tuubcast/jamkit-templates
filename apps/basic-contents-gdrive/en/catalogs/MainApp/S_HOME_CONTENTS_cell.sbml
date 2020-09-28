@@ -1,0 +1,25 @@
+=begin cell: script-when-loaded=on_loaded
+
+=object section: section=navibar, style=section_navibar
+=begin navibar: id=navibar
+=begin title
+=(object button: script=back, image=btn_back.png, style=btn_back)= @{Contents}
+=end title
+=object button: image=btn_favorites.png, script=show_favorites, style=btn_navibar.right
+=object button: image=btn_search.png, script=start_search, style=btn_navibar.right.second
+=object section: id=section.searchbar, section=searchbar, hidden=yes, style=section_searchbar
+=begin searchbar: id=searchbar
+=object blank: style=blank_keyword
+=object textfield: id=keyword, script=search_keyword, return-key-type=search, \
+            placeholder="@{Enter your search keyword.}", style=textfield_keyword
+=object button: image=btn_clear.png, script=clear_keyword, style=btn_clear
+=object button: image=btn_close.png, script=cancel_search, style=btn_navibar.right
+=end searchbar
+=end navibar
+
+=object showcase: id=showcase.contents, name=contents, \
+            selectable=yes, script-when-selected=on_select_content, \
+            sortable=yes, sortkey=rowid, sortorder=descending, \
+            style=showcase_contents
+
+=end cell
